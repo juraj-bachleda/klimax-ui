@@ -1,0 +1,63 @@
+//--------
+// Buttons
+//--------
+
+//-------------
+// Base buttons
+//-------------
+.btn {
+  display: inline-flex;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+}
+
+.btn--small {
+  padding: px-to-rem(4.5px) px-to-rem(10px);
+}
+
+.btn--medium {
+  padding: px-to-rem(7px) px-to-rem(30px);
+}
+
+.btn--large {
+  padding: px-to-rem(9.5px) px-to-rem(25px);
+}
+
+.btn--blue {
+  color: $white;
+  background: linear-gradient(0deg, #0e89c8 0%, #1a94d3 50%, #1a94d3 100%);
+}
+
+.btn--white {
+  color: $blue;
+  background: $white;
+}
+
+.btn--transparent {
+  border: 2px solid currentColor;
+}
+
+//------------
+// Menu button
+//------------
+.menu-btn {
+  display: flex;
+  margin-left: auto;
+  margin-right: px-to-rem(-32px);
+  align-items: center;
+  justify-content: center;
+  width: px-to-rem(48px);
+  height: px-to-rem(48px);
+  padding: 0;
+  border: 0;
+  background: $blue;
+
+  &:focus {
+    outline: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}

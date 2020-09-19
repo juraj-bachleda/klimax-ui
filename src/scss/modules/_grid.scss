@@ -1,0 +1,94 @@
+//--------------
+// Grid settings
+//--------------
+$grid-breakpoints: (sm: $screen-sm, md: $screen-md, lg: $screen-lg);
+
+//--------------
+// Grid mixins
+//--------------
+// ----------------------------------------------------
+// Set proper width and flex-basis for cols in the grid
+// ----------------------------------------------------
+@mixin calc-grid-cell-basis-and-width($i) {
+  flex-basis: ($i / $grid-columns-number) * 100%;
+  max-width: ($i / $grid-columns-number) * 100%;
+}
+
+// -------------------------------------------------------------------
+// Set proper margin for cols in the grid when they have offset pushed
+// -------------------------------------------------------------------
+@mixin calc-grid-cell-offset-margin($i) {
+  margin-left: ($i / $grid-columns-number) * 100%;
+}
+
+// ------------------------------------------------------
+// Don't generate @media(min-width:0) queries in our grid
+// ------------------------------------------------------
+@mixin include-grid-media-query-only-if-set($bp-value) {
+  @if ($bp-value > 0) {
+    @media(min-width: $bp-value) {
+      @content
+    }
+  } @else {
+    @content
+  }
+}
+
+//-----
+// Grid
+//-----
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: - $grid-gutter-width;
+  margin-left: - $grid-gutter-width;
+  margin-top: - $grid-gutter-width;
+  margin-bottom: - $grid-gutter-width;
+}
+
+[class*='col-'] {
+  flex-grow: 1;
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+}
+
+.col-sm,
+.col-md,
+.col-lg {
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+// -------------------------------------------
+// Set widths, flex-basis and offset for cols
+// -------------------------------------------
+@each $bp-prefix,
+$bp-value in $grid-breakpoints {
+  @include include-grid-media-query-only-if-set($bp-value) {
+    //----
+    // Col
+    //----
+    @for $i from 1 through $grid-columns-number {
+      .col-#{$bp-prefix}-#{$i} {
+        @include calc-grid-cell-basis-and-width($i);
+      }
+    }
+    //-----------
+    // Offset Col
+    //-----------
+    @for $i from 0 through 11 {
+      .col-#{$bp-prefix}-offset-#{$i} {
+        @include calc-grid-cell-offset-margin($i);
+      }
+    }
+  }
+}

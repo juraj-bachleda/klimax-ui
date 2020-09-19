@@ -1,0 +1,61 @@
+//------
+// Icons
+//------
+.svg-car {
+  width: px-to-rem(87px);
+  height: px-to-rem(60px);
+}
+
+.svg-cart {
+  width: px-to-rem(63px);
+  height: px-to-rem(65px);
+}
+
+.svg-service {
+  width: px-to-rem(89px);
+  height: px-to-rem(81px);
+}
+
+.svg-map {
+  width: px-to-rem(89px);
+  height: px-to-rem(81px);
+}
+
+.svg-gear {
+  width: px-to-rem(82px);
+  height: px-to-rem(78px);
+}
+
+.svg-ac {
+  width: px-to-rem(90px);
+  height: px-to-rem(53px);
+}
+
+.svg-klimax {
+  width: px-to-rem(269px);
+  height: px-to-rem(40px);
+}
+
+.svg-menu {
+  fill: white;
+  width: px-to-rem(32px);
+  height: px-to-rem(32px);
+}
+
+.svg-phone,
+.svg-mail {
+  fill: $blue;
+  width: px-to-rem(40px);
+  height: px-to-rem(40px);
+  @media(min-width: $screen-lg){
+    width: px-to-rem(100px);
+    height: px-to-rem(100px);
+  }
+}
+
+.svg-f,
+.svg-g\+,
+.svg-in {
+  width: px-to-rem(51px);
+  height: px-to-rem(51px);
+}

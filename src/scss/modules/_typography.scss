@@ -1,0 +1,81 @@
+//-----------
+// Typography
+//-----------
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  letter-spacing: 0.05em;
+  line-height: $line-height;
+  color: $black;
+}
+
+//------
+// Links
+//------
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:not([href]) {
+    cursor: default;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+//----------------
+// Heading stripes
+//----------------
+.heading-stripe {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: px-to-rem(-16px);
+    right: px-to-rem(0px);
+    width: px-to-rem(70px);
+    height: px-to-rem(6px);
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+}
+
+.heading-stripe--white::after {
+  background-color: $white;
+}
+
+.heading-stripe--blue::after {
+  background-color: $blue;
+}
+
+//---------
+// Headings
+//---------
+h2, .h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: px-to-rem(35px);
+}
+
+h3, .h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: px-to-rem(25px);
+}
+
+h4, .h4 {
+  margin-top: 0;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: px-to-rem(15px);
+}

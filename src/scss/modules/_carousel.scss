@@ -1,0 +1,31 @@
+//---------
+// Carousel
+//---------
+.carousel {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel__wrapper {
+  position: relative;
+  left: 0;
+  display: flex;
+  align-items: center;
+  transition: left 0.3s ease-in-out;
+
+}
+
+.carousel__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: px-to-rem(160px);
+  padding: px-to-rem(10px) px-to-rem(40px);
+
+  > img {
+    width: auto;
+    height: auto;
+    max-width: px-to-rem(200px);
+    max-height: 100%;
+  }
+}

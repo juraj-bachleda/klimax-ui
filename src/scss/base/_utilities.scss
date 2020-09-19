@@ -1,0 +1,223 @@
+//----------------
+// OOCSS utilities
+//----------------
+
+//-----------
+// Typography
+//-----------
+.lato {
+  font-family: 'Lato', sans-serif !important;
+}
+.light {
+  font-weight: $light !important;
+}
+.regular {
+  font-weight: $regular !important;
+}
+.semi-bold {
+  font-weight: $semibold !important;
+}
+.bold {
+  font-weight: $bold !important;
+}
+.no-underline {
+  text-decoration: none !important;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.font-size-15 {
+  font-size: px-to-rem(15px) !important;
+}
+.font-size-16 {
+  font-size: px-to-rem(16px) !important;
+}
+.font-size-22 {
+  font-size: px-to-rem(22px) !important;
+}
+.font-size-35 {
+  font-size: px-to-rem(35px) !important;
+}
+.pre-line {
+  white-space: pre-line !important;
+}
+.lh-small {
+  line-height: 1.3 !important;
+}
+
+//-------
+// Colors
+//-------
+.black {
+  color: $black !important;
+}
+.white {
+  color: $white !important;
+}
+.blue {
+  color: $blue !important;
+}
+.bg-gray {
+  background-color: $gray !important;
+}
+.bg-white {
+  background-color: $white !important;
+}
+.bg-blue {
+  background-color: $blue !important;
+}
+.bg-night {
+  background-color: $night !important;
+}
+.fill-blue {
+  fill: $blue !important;
+}
+
+//-------------------
+// Display properties
+//-------------------
+.block {
+  display: block !important;
+}
+.flex {
+  display: flex !important;
+}
+.inline-flex {
+  display: inline-flex !important;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.grow-1 {
+  flex-grow: 1 !important;
+}
+.align-center {
+  align-items: center !important;
+}
+.align-bottom {
+  align-items: flex-end !important;
+}
+.justify-end {
+  justify-content: flex-end !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+
+//--------
+// Margins
+//--------
+.m-0 {
+  margin: 0 !important;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.mh-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.mr-14 {
+  margin-right: px-to-rem(14px) !important;
+}
+.ml-14 {
+  margin-left: px-to-rem(14px) !important;
+}
+.mr-20 {
+  margin-right: px-to-rem(20px) !important;
+}
+.mb-20 {
+  margin-bottom: px-to-rem(20px) !important;
+}
+.ml-20 {
+  margin-left: px-to-rem(20px) !important;
+}
+.mb-40 {
+  margin-bottom: px-to-rem(40px) !important;
+}
+.mt-60 {
+  margin-top: px-to-rem(60px) !important;
+}
+.mb-60 {
+  margin-bottom: px-to-rem(60px) !important;
+}
+.ml-60 {
+  margin-left: px-to-rem(60px) !important;
+}
+.mt-80 {
+  margin-top: px-to-rem(80px) !important;
+}
+.mb-80 {
+  margin-bottom: px-to-rem(80px) !important;
+}
+
+//---------
+// Paddings
+//---------
+.p-0 {
+  padding: 0 !important;
+}
+.pv-8 {
+  padding-top: px-to-rem(8px) !important;
+  padding-bottom: px-to-rem(8px) !important;
+}
+.pv-10 {
+  padding-top: px-to-rem(10px) !important;
+  padding-bottom: px-to-rem(10px) !important;
+}
+.pv-24 {
+  padding-top: px-to-rem(24px) !important;
+  padding-bottom: px-to-rem(24px) !important;
+}
+.pt-24 {
+  padding-top: px-to-rem(24px) !important;
+}
+.pb-24 {
+  padding-bottom: px-to-rem(24px) !important;
+}
+.p-32 {
+  padding: px-to-rem(32px) !important;
+}
+.pv-40 {
+  padding-top: px-to-rem(40px) !important;
+  padding-bottom: px-to-rem(40px) !important;
+}
+.pv-80 {
+  padding-top: px-to-rem(80px) !important;
+  padding-bottom: px-to-rem(80px) !important;
+}
+
+//-----------
+// Visibility
+//-----------
+.hide {
+  display: none !important;
+}
+.relative {
+  position: relative !important;
+}
+
+//------
+// Sizes
+//------
+.h-90 {
+  height: px-to-rem(90px) !important;
+}
+.h-100 {
+  height: px-to-rem(100px) !important;
+}
+.w-100 {
+  width: px-to-rem(100px) !important;
+}

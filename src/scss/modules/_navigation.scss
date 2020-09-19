@@ -1,0 +1,200 @@
+//-----------
+// Navigation
+//-----------
+
+//----------
+// Container
+//----------
+.main-navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  padding: px-to-rem(20px);
+  background-color: $white;
+
+  @media(min-width: $screen-md) {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    align-items: center;
+    padding: px-to-rem(24px) 0 0 0;
+    background-color: transparent;
+  }
+}
+
+.main-navigation--active {
+  display: flex;
+}
+
+//------
+// Items
+//------
+.main-navigation > ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  @media(min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: px-to-rem(-14px);
+    margin-right: px-to-rem(-14px);
+  }
+}
+
+.main-navigation > ul > li {
+  position: relative;
+  padding-top: px-to-rem(8px);
+  padding-right: 0.75rem;
+  padding-bottom: px-to-rem(8px);
+  padding-left: 0.75rem;
+  border-bottom: 1px solid $gray;
+
+  @media(min-width: $screen-md) {
+    border-bottom: 0;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 1px;
+      height: px-to-rem(23px);
+      background-color: #898989;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.main-navigation__link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  @media(min-width: $screen-md) {
+    display: inline-block;
+  }
+}
+
+.main-navigation__link--active {
+  color: $blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: px-to-rem(-6px);
+    width: px-to-rem(6px);
+    height: px-to-rem(38px);
+    background-color: $blue;
+  }
+
+  @media(min-width: $screen-md) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: px-to-rem(-8px);
+      right: px-to-rem(14px);
+      left: auto;
+      width: px-to-rem(28px);
+      height: px-to-rem(3px);
+      background-color: $blue;
+      -webkit-transform: translateX(25%);
+      transform: translateX(25%);
+    }
+  }
+}
+
+//----------
+// Sub-Items
+//----------
+.main-navigation > ul > li > ul {
+  padding-top: px-to-rem(8px);
+  padding-left: px-to-rem(20px);
+  list-style: none;
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    list-style: none;
+    background-color: $white;
+    -webkit-transform: translateY(#{px-to-rem(-6px)});
+    transform: translateY(#{px-to-rem(-6px)});
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+  }
+
+}
+
+.main-navigation > ul > li:hover > ul {
+  @media (min-width: $screen-md) {
+    min-width: px-to-rem(200px);
+    width: calc(100% + #{px-to-rem(24px)});
+    height: auto;
+    opacity: 1;
+    overflow: visible;
+    padding-top: px-to-rem(8px);
+    padding-right: px-to-rem(24px);
+    padding-bottom: px-to-rem(8px);
+    padding-left: px-to-rem(24px);
+    margin-left: px-to-rem(-24px);
+    border: 1px solid $gray;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+  }
+}
+
+.main-navigation__sub-link {
+  position: relative;
+  display: block;
+  padding-top: px-to-rem(6px);
+  padding-bottom: px-to-rem(6px);
+  color: $black;
+}
+
+.main-navigation__sub-link--active {
+  font-weight: 700;
+}
+
+@media (min-width: $screen-md) {
+  .main-navigation__sub-link--active::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: px-to-rem(-16px);
+    width: px-to-rem(3px);
+    height: 50%;
+    background-color: $blue;
+  }
+}
+//----
+// CTA
+//----
+.main-navigation > .btn {
+  margin-top: px-to-rem(8px);
+  margin-right: auto;
+  margin-left: auto;
+  @media(min-width: $screen-md) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: px-to-rem(14px);
+  }
+}
+
+//----------
+// Quick-nav
+//----------
+.quick-nav > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}

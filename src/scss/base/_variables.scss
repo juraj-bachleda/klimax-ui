@@ -1,0 +1,39 @@
+//-----
+// Typo
+//-----
+$font-size-root:                              16px      !default;
+$font-size-base:                              1.0625em  !default; // 17px
+$line-height:                                 1.6       !default;
+$font-family:                                 'Hind', Arial, sans-serif !default;
+$light:                                       300 !default;
+$regular:                                     400 !default;
+$semibold:                                    600 !default;
+$bold:                                        700 !default;
+
+//------------
+// Breakpoints
+//------------
+$screen-sm:                                   30em       !default; //480px
+$screen-md:                                   48em       !default; //768px
+$screen-lg:                                   64em       !default; //1024px
+
+//--------
+// Spacing
+//--------
+$base-space:                                  1rem !default; //8px
+
+//-----
+// Grid
+//-----
+$grid-gutter-width:                           $base-space*2 !default;
+$grid-columns-number:                         12 !default;
+
+//-------
+// Colors
+//-------
+$blue:                                        #1a93d2;
+$night:                                       #03051e;
+$gray:                                        #ebebeb;
+$white:                                       #ffffff;
+$black:                                       #252525;
+$border-gray:                                 #898989;
