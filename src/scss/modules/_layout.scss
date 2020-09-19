@@ -116,9 +116,14 @@
     margin-top: px-to-rem(60px);
   }
 }
-.banner > .btn.js-animation {
-  transition: opacity .5s ease-in-out;
+.js .banner > .btn {
+  opacity: 0;
+  &.animate {
+    transition: opacity .5s ease-in-out;
+    opacity: 1;
+  }
 }
+
 .banner__heading {
   margin-top: 0;
   margin-bottom: 0;
@@ -138,8 +143,13 @@
     max-width: px-to-rem(380px);
   }
 }
-.banner__heading.js-animation {
-  transition: opacity .5s ease-in-out;
+.js .banner__heading {
+  opacity: 0;
+  &.animate {
+    transition: opacity .5s ease-in-out;
+    opacity: 1;
+  }
+
 }
 
 .banner__image {
@@ -156,8 +166,14 @@
     padding-top: 0;
   }
 }
-.banner__image.js-animation {
-   transition: opacity .5s ease-in-out, right 0.5s ease-in-out;
+.js .banner__image {
+  opacity: 0;
+  right: px-to-rem(-300px);
+   &.animate {
+     transition: opacity .5s ease-in-out, right 0.5s ease-in-out;
+     opacity: 1;
+     right: 0;
+   }
 }
 
 //---------

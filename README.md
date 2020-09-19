@@ -11,14 +11,21 @@ To get started, run the following command:
 npm install
 ```
 
-To run server with production build run the following command
+To run pre-build production site run following command:
+
+```
+gulp server
+```
+Server runs on http://localhost:8080
+
+To do new production build and run it on server run following command:
 
 ```
 gulp prod --env production
 ```
 -> then open browser on http://localhost:8080
 
-To open development build in the browser run the following command:
+To do new development build and run it on server run following command:
 
 ```
 gulp dev --env development

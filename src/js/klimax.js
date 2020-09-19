@@ -108,67 +108,24 @@ window.addEventListener("load", function () {
 // Banner animation
 //-----------------
 
-function hideBannerImage() {
-    const bannerImage = document.querySelector('.banner__image');
-    bannerImage.style.opacity = 0;
-    bannerImage.style.right = '-300px';
-    setTimeout(function () {
-        bannerImage.classList.add('js-animation');
-    },0)
-}
-function hideBannerText() {
-    const bannerText = document.querySelector('.banner__heading');
-    bannerText.style.opacity = 0;
-    setTimeout(function () {
-        bannerText.classList.add('js-animation');
-    },0)
-}
+function animateBanner() {
+    const bannerEls = [
+        document.querySelector('.banner__heading'),
+        document.querySelector('.banner__image'),
+        document.querySelector('.banner > .btn')
+    ];
+    for (let i = 0; i < bannerEls.length; i++) {
+        setTimeout(function (el) {
+            bannerEls[i].classList.add('animate');
+        },i*100);
+    }
 
-function hideBannerButton() {
-    const bannerButton = document.querySelector('.banner > .btn');
-    bannerButton.style.opacity = 0;
-    setTimeout(function () {
-        bannerButton.classList.add('js-animation');
-    },0)
-}
 
-function animateBannerImage() {
-    const bannerImage = document.querySelector('.banner__image');
-    bannerImage.style.opacity = 1;
-    bannerImage.style.right = '0';
 }
-function animateBannerText() {
-    const bannerImage = document.querySelector('.banner__heading');
-    bannerImage.style.opacity = 1;
-}
-function animateBannerButton() {
-    const bannerButton = document.querySelector('.banner > .btn');
-    bannerButton.style.opacity = 1;
-}
+window.addEventListener("load", function () {
+    animateBanner();
+});
 
-function runAnimationClear(done) {
-    document.addEventListener("DOMContentLoaded", function () {
-        hideBannerImage();
-        hideBannerText();
-        hideBannerButton();
-    });
-    return done();
-};
-
-runAnimationClear( runAnimations );
-
-function runAnimations() {
-    window.addEventListener("load", function () {
-        animateBannerText();
-        setTimeout(function () {
-            animateBannerButton();
-        },100);
-        setTimeout(function () {
-            animateBannerImage();
-
-        },200)
-    });
-}
 
 //---------------------
 // Load svg sprite file

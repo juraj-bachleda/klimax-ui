@@ -140,4 +140,5 @@ function connectDist() {
 
 exports.dev = series(clear, parallel(css, js, html, svg, img), parallel(watchFiles, browserSync));
 exports.prod = series(clear, parallel(css, js, html, svg, img), parallel(connectDist));
+exports.server = series(connectDist);
 exports.default = series(clear, parallel(css, js, html, svg, img));
